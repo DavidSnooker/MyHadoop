@@ -1,7 +1,14 @@
 MyHadoop is a simple web frontend for hadoop.
 
-1. Change /MyHadoop/myhadoop/scripts/hadoop.sh
-Let it generate the result file in /MyHadoop/myhadoop/static/output/
+Functions
+---------
+1. Upload source code
+2. Execute bash script
+3. Download results
 
-2. Change function in /MyHadoop/myhadoop/utils/hadoopfile.py
+Configuration
+-------------
+1. Edit /MyHadoop/myhadoop/scripts/hadoop.sh
+Let it generate the result file in /MyHadoop/myhadoop/static/output/
+2. Edit execute() in /MyHadoop/myhadoop/utils/hadoopfile.py
 Let it return the filename of the result file (don't include path)
