@@ -7,6 +7,7 @@ import os
 import tempfile
 import shutil
 import subprocess
+import time
 from django.conf import settings
 
 class HadoopFile(object):
@@ -31,6 +32,9 @@ class HadoopFile(object):
         print(self.OUTPUT_DIR)
         # call script
         subprocess.call([self.SCRIPT, filepath, self.OUTPUT_DIR])
-        result = os.path.basename(filepath)
+        # check if output file has been created
+        filename = os.path.basename(filepath)
+        while not os.path.exists(os.path.join(self.OUTPUT_DIR, filename)):
+            time.sleep(1)
+        result = filename
         return result
-        
