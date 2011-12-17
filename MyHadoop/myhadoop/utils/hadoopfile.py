@@ -17,7 +17,7 @@ class HadoopFile(object):
     def __init__(self, source):
         '''
         constructor
-        '''
+        ''' 
         self.source = source
         self.APP_DIR = os.path.realpath(os.path.join(settings.PROJECT_PATH, "myhadoop"))
         self.INPUT_DIR = os.path.realpath(os.path.join(self.APP_DIR, "input"))
@@ -31,9 +31,9 @@ class HadoopFile(object):
         print(filepath)
         print(self.OUTPUT_DIR)
         # call script
-        subprocess.call([self.SCRIPT, filepath, self.OUTPUT_DIR])
+        filename = os.path.basename(filepath) + ".tar.gz"
+        subprocess.call([self.SCRIPT, filename, filepath, self.OUTPUT_DIR])
         # check if output file has been created
-        filename = os.path.basename(filepath)
         while not os.path.exists(os.path.join(self.OUTPUT_DIR, filename)):
             time.sleep(1)
         result = filename
