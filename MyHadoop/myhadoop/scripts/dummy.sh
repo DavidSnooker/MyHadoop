@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "copying$1"
 src="$2"
 dst="$3"
 
-cp $src $dst
+echo "copying $src to $dst/$1"
+cp $src "$dst/$1"
