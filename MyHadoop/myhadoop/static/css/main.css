@@ -1,0 +1,20 @@
+body {
+	background-color: #000;
+	background: url(../img/bg.jpg) center top;
+}
+#main_pn {
+	width: 500px;
+	height: 180px;
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+	align: center;
+	margin: 10em auto;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#title_pn {
+	font: 3em serif;
+}
+.pd_1 {
+	padding: 20px 0 20px 20px;
+}

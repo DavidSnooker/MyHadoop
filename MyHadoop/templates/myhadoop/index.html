@@ -1,8 +1,17 @@
 <html>
+<head>
+<title>MyHadoop</title>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css" />
+</head>
 <body>
-<form method="post" action="/myhadoop/upload/" enctype="multipart/form-data">{% csrf_token %}
-    <input type="file" name="file" />
-    <input type="submit" name="submit" value="Upload & Run" />
-</form>
+<div id="main_pn">
+	<div id="title_pn" class="pd_1">MyHadoop</div>
+	<div class="pd_1">
+	<form method="post" action="/myhadoop/upload/" enctype="multipart/form-data">{% csrf_token %}
+		<input type="submit" name="submit" value="Upload & Run" />
+		<input type="file" name="file" />
+	</form>
+	</div>
+</div>
 </body>
 </html>
