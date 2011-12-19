@@ -2,6 +2,14 @@ body {
 	background-color: #000;
 	background: url(../img/bg.jpg) center top;
 }
+a:link, a:visited, active {
+	color: #fff;
+	text-decoration: none;
+}
+a:hover {
+	color: #fff;
+	text-shadow: 0px 0px 4px #af1; 
+}
 #main_pn {
 	width: 500px;
 	height: 180px;
@@ -17,4 +25,7 @@ body {
 }
 .pd_1 {
 	padding: 20px 0 20px 20px;
+}
+.pd_left {
+	padding-left: 5px;
 }
