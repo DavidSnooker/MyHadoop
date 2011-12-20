@@ -17,13 +17,13 @@ class HadoopFile(object):
     def __init__(self, source):
         '''
         constructor
-        ''' 
+        '''
         self.source = source
         self.APP_DIR = os.path.realpath(os.path.join(settings.PROJECT_PATH, "myhadoop"))
         self.INPUT_DIR = os.path.realpath(os.path.join(self.APP_DIR, "input"))
         self.OUTPUT_DIR = os.path.realpath(os.path.join(self.APP_DIR, "static", "output"))
-        self.SCRIPT = os.path.realpath(os.path.join(self.APP_DIR, "scripts", "dummy.sh"))
-        
+        self.SCRIPT = os.path.realpath(os.path.join(self.APP_DIR, "scripts", "hadoop.sh"))
+
     def execute(self):
         _, filepath = tempfile.mkstemp(prefix=self.source.name, dir=self.INPUT_DIR)
         with open(filepath, 'wb') as dest:
