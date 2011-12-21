@@ -8,6 +8,8 @@ def index(request):
 
 def upload(request):
     if request.method == 'POST':
+        if 'file' not in request.FILES:
+            return render_to_response('myhadoop/error.html', {'msg': "No file is uploaded"}, context_instance=RequestContext(request))
         hadoopfile = HadoopFile(request.FILES['file'])
         result = hadoopfile.execute()
         return render_to_response('myhadoop/result.html', {'result': result}, context_instance=RequestContext(request))
