@@ -3,12 +3,11 @@ body {
 	background: url(../img/bg.jpg) center top;
 }
 a:link, a:visited, active {
-	color: #fff;
-	text-decoration: none;
+	color: #af1;
 }
 a:hover {
-	color: #fff;
-	text-shadow: 0px 0px 4px #af1; 
+	color: #af1;
+	text-shadow: 0px 0px 4px #fff; 
 }
 #main_pn {
 	width: 500px;
